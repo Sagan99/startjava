@@ -1,18 +1,23 @@
-import java.util.Scanner; // Было в задачах в материалах про ветвление Java
+import java.util.Scanner;
 
 public class MyGame {
-	public static void main(String[] args) {
-	    int secretNumber = 25;
-	System.out.print("Введи число от 0 до 100");
-	Scanner answer = new Scanner(System.in);
-	int userNumber = answer.nextInt();
+	
+	public static void main(String []args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Выбери число от 0 до 100. Отгадай мое загаданное число");
+		int guessNumberofSystem = 25;
+		int playerNumber;
 
-	if(userNumber == secretNumber) {
-	    System.out.println ("Ты угадал число!");
-	} else if(userNumber < secretNumber && userNumber >=0) {
-	    System.out.println ("Мое число больше");
-	} else if(userNumber > secretNumber && userNumber <=0) {
-	    System.out.println ("Мое число меньше");
-	    }
+		do {
+			playerNumber = scan.nextInt();
+			if (playerNumber < guessNumberofSystem) {
+				System.out.println ("Мое число больше");
+			} else if (playerNumber > guessNumberofSystem) {
+				System.out.println ("Мое число меньше");
+			} else {
+				break;
+			}
+		}while(playerNumber != guessNumberofSystem);
+		System.out.println("Поздровляю, ты угадал");
 	}
 }
