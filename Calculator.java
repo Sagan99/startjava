@@ -18,7 +18,7 @@ public class Calculator {
 				result *= x;
 			}
 			System.out.println(result);
-		} else if (mathFunction == '%') {
+		} else if (mathFunction == '%'){
 			System.out.println(x % y);
 		}
 	}
