@@ -14,8 +14,6 @@ public class MyGame {
 				System.out.println ("Мое число больше");
 			} else if (playerNumber > guessNumberofSystem) {
 				System.out.println ("Мое число меньше");
-			} else {
-				break;
 			}
 		}while(playerNumber != guessNumberofSystem);
 		System.out.println("Поздровляю, ты угадал");
